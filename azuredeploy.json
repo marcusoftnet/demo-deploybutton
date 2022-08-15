@@ -147,23 +147,6 @@
         "[resourceId('Microsoft.Sql/servers', variables('sqlserverName'))]",
         "[resourceId('Microsoft.Web/sites', variables('websiteName'))]"
       ]
-    },
-    {
-      "type": "Microsoft.Insights/components",
-      "apiVersion": "2020-02-02",
-      "name": "[format('AppInsights{0}', variables('websiteName'))]",
-      "location": "[parameters('location')]",
-      "tags": {
-        "[format('hidden-link:{0}', resourceId('Microsoft.Web/sites', variables('websiteName')))]": "Resource",
-        "displayName": "AppInsightsComponent"
-      },
-      "kind": "web",
-      "properties": {
-        "Application_Type": "web"
-      },
-      "dependsOn": [
-        "[resourceId('Microsoft.Web/sites', variables('websiteName'))]"
-      ]
     }
   ]
 }
