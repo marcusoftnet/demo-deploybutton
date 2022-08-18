@@ -139,7 +139,8 @@
           ],
           "properties": {
             "repoUrl": "https://github.com/marcusoftnet/demo-deploybutton",
-            "branch": "main"
+            "branch": "main",
+            "isManualIntegration": true
           }
         }
       ],
